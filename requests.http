@@ -1,0 +1,49 @@
+POST http://localhost:3000/items
+content-type: application/json
+
+{
+    "name": "Item with tags + events 6",
+    "listing": {
+        "description": "This item is good with tags and events 6"
+    },
+    "tags": [
+        {
+            "content": "Blue event 6"
+        },
+        {
+            "content": "Large event 6"
+        }
+    ]
+}
+
+###
+
+GET http://localhost:3000/items
+content-type: application/json
+
+###
+
+GET http://localhost:3000/items/8
+content-type: application/json
+
+###
+
+PATCH http://localhost:3000/items/8
+content-type: application/json
+
+{
+    "public": false,
+    "comments": [
+        {
+            "content": "Coment 1"
+        },
+        {
+            "content": "Coment 2"
+        }
+    ]
+}
+
+###
+
+DELETE http://localhost:3000/items/2
+content-type: application/json
